@@ -1,0 +1,3 @@
+# ── Monitoring-specific extras (evidently, collect, trigger, store) ─────────
+evidently==0.4.30
+scikit-learn==1.4.2

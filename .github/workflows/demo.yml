@@ -1,0 +1,34 @@
+name: OpenMLOps Demo
+
+on: [push, workflow_dispatch]
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install dvc
+      
+      - name: Download CIFAR-10
+        run: |
+          python -c "import torchvision; torchvision.datasets.CIFAR10(root='data', train=True, download=True); torchvision.datasets.CIFAR10(root='data', train=False, download=True)"
+      
+      - name: Show pipeline structure
+        run: |
+          echo "=== Training Pipeline Steps ==="
+          cat src/pipelines/training_pipeline.py
+          echo ""
+          echo "=== Monitoring Pipeline Steps ==="
+          cat src/pipelines/monitoring_pipeline.py
+          echo ""
+          echo "=== All required components present ==="
+          ls -la

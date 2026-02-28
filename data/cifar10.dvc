@@ -1,0 +1,5 @@
+outs:
+- md5: placeholder_will_be_computed_on_first_run
+  size: 0
+  path: cifar10
+  desc: CIFAR-10 dataset downloaded from torchvision

@@ -1,0 +1,10 @@
+Evidently Report Summary
+=======================
+
+Reference data points: 1000
+Current data points: 1000
+Features: ['feature_1', 'feature_2', 'feature_3', 'prediction']
+
+Sample Statistics:
+  Reference feature_1 mean: 0.019
+  Current feature_1 mean: 0.431

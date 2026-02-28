@@ -1,0 +1,8 @@
+[core]
+    remote = minio
+    autostage = true
+['remote "minio"']
+    url = s3://dvc-store
+    endpointurl = http://minio:9000
+    access_key_id = minioadmin
+    secret_access_key = minioadmin123

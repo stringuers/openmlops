@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Data (versioned by DVC)
+data/cifar10/
+data/cifar-10-batches-py/
+*.tar.gz
+
+# Artifacts
+artifacts/
+monitoring/
+
+# Environment
+.env.local
+*.env
+!.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Docker
+.docker/
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# ZenML
+.zen/
+zenml.db
+
+# DVC internals
+.dvc/cache
+.dvc/tmp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
